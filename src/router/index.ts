@@ -1,7 +1,7 @@
+import {createWebHashHistory,createRouter} from 'vue-router';
 import HomePage from "@/views/HomePage.vue";
 import AboutPage from "@/views/AboutPage.vue";
 import NotFoundPage from "@/views/NotFoundPage.vue";
-import {createWebHashHistory,createRouter} from 'vue-router';
 
 export enum ROUTES {
     HomePage = '/',
