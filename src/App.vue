@@ -1,18 +1,22 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from '@/components/HelloWorld.vue'
-import HomePage from './views/HomePage.vue';
+import { ref,defineAsyncComponent } from "vue";
+import HelloWorld from "@/components/HelloWorld.vue"
 
-const k = 'idan'
+const isShow = ref(false)
 
-console.log('hsello')
+// const HelloWorld = defineAsyncComponent(() => import('./components/HelloWorld.vue'))
 
 </script>
 
 <template>
-  <HomePage />
-  <HelloWorld />
+  <HelloWorld
+    v-if="isShow"
+    :msg="'hello'"
+    :is-defined="false"
+  />
+  <button @click="isShow = true" />
+
+  <router-view />
 </template>
 
 <style scoped>
