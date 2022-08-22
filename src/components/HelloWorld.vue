@@ -1,10 +1,10 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
 import { ref } from 'vue'
 
 
 interface Props {
   msg: string;
-  isDefined: string
+  isDefined: boolean
 }
 defineProps<Props>()
 
@@ -53,4 +53,4 @@ const k = 'idan'
 .read-the-docs {
   color: #888;
 }
-</style> -->
+</style>
