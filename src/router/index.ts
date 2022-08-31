@@ -1,15 +1,18 @@
+import {createWebHashHistory,createRouter} from 'vue-router';
 import HomePage from "@/views/HomePage.vue";
 import AboutPage from "@/views/AboutPage.vue";
-import {createWebHashHistory,createRouter} from 'vue-router';
+import NotFoundPage from "@/views/NotFoundPage.vue";
 
 export enum ROUTES {
     HomePage = '/',
-    AboutPage = '/about'
+    AboutPage = '/about',
+    NotFoundPage = '/:pathMatch(.*)*'
 }
 
 const routes  = [
     {path: ROUTES.HomePage, component: HomePage},
     {path: ROUTES.AboutPage, component: AboutPage},
+    {path: ROUTES.NotFoundPage, component: NotFoundPage},
     {path: '/about/:id', component: AboutPage}
 ]
 
